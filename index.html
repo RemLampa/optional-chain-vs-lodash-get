@@ -1,0 +1,10 @@
+<html><head><title>ES5 & ES6 Optional Chaining vs. Lodash _.get()</title><link rel="stylesheet" type="text/css" href="/optional-chain-vs-lodash-get/style.d0a6cec8.css"></head><body> <div class="test-data"> <h3>Test Data</h3> <pre>var obj = {a: {b: {c: {d: 1}}}}</pre> <pre>var badObj = {}</pre> </div> <div class="num-iterations"> <label> <input type="number" value="3000"> iterations </label> </div> <section class="actions"> <div class="action action__es5-optional-chaining"> <h3>ES5 Optional Chaining</h3> <pre>
+          (obj.a == null ? undefined : obj.a.b == null ? undefined : obj.a.b.c == null ? undefined : obj.a.b.c.d) || 2
+          (badObj.a == null ? undefined : badObj.a.b == null ? undefined : badObj.a.b.c == null ? undefined : badObj.a.b.c.d) || 2
+        </pre> <div> <button "button="" button__es5-optional-chaining"="">Run</button> </div> <div class="result result__es5-optional-chaining"> Result: <span></span> </div> </div> <div class="action action__es6-optional-chaining"> <h3>ES6 Optional Chaining</h3> <pre>
+          obj?.a?.b?.c?.d || 2
+          badObj?.a?.b?.c?.d || 2
+        </pre> <div> <button "button="" button__es6-optional-chaining"="">Run</button> </div> <div class="result result__es6-optional-chaining"> Result: <span></span> </div> </div> <div class="action aciton__lodash-get"> <h3>Lodash _.get() v4.4</h3> <pre>
+          _.get(obj, "a.b.c.d", 2)
+          _.get(badObj, "a.b.c.d", 2)
+        </pre> <div> <button "button="" button__lodash-get"="">Run</button> </div> <div class="result result__lodash-get"> Result: <span></span> </div> </div> </section> <script src="/optional-chain-vs-lodash-get/src.8df3e838.js"></script> </body></html>
