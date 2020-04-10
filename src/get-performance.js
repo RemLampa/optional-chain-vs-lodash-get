@@ -7,8 +7,8 @@ function formatNumber(num) {
   return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 }
 
-function getPerformance(callback) {
-  const iterations = parseInt(getIterations());
+function getPerformance(testFunction) {
+  const iterations = parseInt(getIterations(), 10);
 
   let prop;
   let badProp;
@@ -16,7 +16,7 @@ function getPerformance(callback) {
   const benchmarkStart = performance.now();
 
   for (let i = 0; i < iterations; i += 1) {
-    const results = callback(obj, badObj);
+    const results = testFunction(obj, badObj);
 
     if (i === iterations - 1) {
       prop = results.prop;
