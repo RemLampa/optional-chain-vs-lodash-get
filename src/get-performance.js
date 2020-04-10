@@ -34,7 +34,7 @@ function getPerformance(callback) {
     runs: formatNumber(iterations),
     prop,
     badProp,
-    runTime,
+    runTime: runTime.toFixed(2),
     operationsPerSecond: formatNumber(operationsPerSecond),
   };
 }
