@@ -6,7 +6,7 @@ import lodashGet from './test-functions/lodash-get';
 
 import getPerformance from './get-performance';
 
-function createClickHandler(callback, cssSelector) {
+function createClickHandler(testFunction, cssSelector) {
   return function handleClick() {
     disableButtons();
 
@@ -16,7 +16,7 @@ function createClickHandler(callback, cssSelector) {
       badProp,
       runTime,
       operationsPerSecond,
-    } = getPerformance(callback);
+    } = getPerformance(testFunction);
 
     const resultElement = document.querySelector(cssSelector);
 
