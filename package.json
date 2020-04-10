@@ -1,0 +1,9 @@
+{
+  "name": "optional-chain-vs-lodash-get",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:RemLampa/optional-chain-vs-lodash-get.git",
+  "author": "Rem Lampa <rem@remlampa.com>",
+  "license": "MIT",
+  "private": false
+}
